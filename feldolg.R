@@ -24,5 +24,5 @@ moistmean.xts <- xts(s.moist, s.dat)
 plot(moistmean.xts)
 
 ## Havi átlag
-apply.monthly(moistmean.xts, mean)
+apply.monthly(moistmean.xts, function(x){mean(x, na.rm=T)})
 plot(moistmean.xts)
